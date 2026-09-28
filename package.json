@@ -1,0 +1,26 @@
+{
+  "name": "product-catalog-api",
+  "version": "1.0.0",
+  "description": "Product Catalog API with robust error handling and logging",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^5.0.0",
+    "morgan": "^1.12.1",
+    "winston": "^3.19.0"
+  }
+}
