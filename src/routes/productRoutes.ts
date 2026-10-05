@@ -1,20 +1,20 @@
 import { Router } from "express";
 import {
-    getProducts,
-    getProduct,
-    createProduct
+  getProducts,
+  getProduct,
+  createProduct,
 } from "../controllers/productController";
+import asyncHandler from "../utils/asyncHandler";
 
 const router = Router();
 
-router.get("/", getProducts);
+// GET all products
+router.get("/", asyncHandler(getProducts));
 
-router.get("/test-error", (req, res, next) => {
-    next(new Error("This is a test server error"));
-});
+// GET product by ID
+router.get("/:id", asyncHandler(getProduct));
 
-router.post("/", createProduct);
-
-router.get("/:id", getProduct);
+// POST create a new product
+router.post("/", asyncHandler(createProduct));
 
 export default router;

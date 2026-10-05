@@ -1,25 +1,42 @@
 {
   "info": {
-    "_postman_id": "f99b2b75-f413-4aab-992b-e122d0c1420a",
-    "name": "product-catalog",
+    "_postman_id": "d4a0020f-668b-457d-b081-feb6d3307c74",
+    "name": "Product catalog api",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "56467276",
-    "_collection_link": "https://go.postman.co/collection/56467276-f99b2b75-f413-4aab-992b-e122d0c1420a?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/56467276-d4a0020f-668b-457d-b081-feb6d3307c74?source=collection_link"
   },
   "item": [
     {
-      "name": "Get product",
+      "name": "get",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": ""
+        }
       },
       "response": []
     },
     {
-      "name": "Get product by Id",
+      "name": "get by id",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
       },
       "response": []
     },
@@ -27,47 +44,21 @@
       "name": "Invalid product id",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": ""
+        }
       },
       "response": []
     },
     {
-      "name": "Unknown route",
+      "name": "Invalid ID format",
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "Post with missing fields",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "Valid post request",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "Test route error",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "Test morgan",
-      "request": {
-        "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": ""
+        }
       },
       "response": []
     }

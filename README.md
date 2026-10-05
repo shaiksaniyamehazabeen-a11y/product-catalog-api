@@ -1,12 +1,14 @@
 # Product Catalog API
 
 ## Introduction
+
 The Product Catalog API is a RESTful API built using
 Node.js, Express.js, and TypeScript. It provides
 product management functionality with centralized
 error handling and logging.
 
 ## Features
+
 - Get all products
 - Get a product by ID
 - Add a new product
@@ -18,6 +20,7 @@ error handling and logging.
 - Separate error and application log files
 
 ## Technologies Used
+
 - Node.js
 - Express.js
 - TypeScript
@@ -46,3 +49,4 @@ src/
 logs/
 ├── error.log
 └── all.log
+```

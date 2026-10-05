@@ -1,25 +1,24 @@
 import express from "express";
+import cors from "cors";
 import productRoutes from "./routes/productRoutes";
-import AppError from "./utils/AppError";
-import errorHandler from "./middleware/errorHandler";
-import morganMiddleware from "./middleware/morganMiddleware";
+import errorMiddleware from "./middleware/errorMiddleware";
 
 const app = express();
 
+const allowedOrigin = process.env.CORS_ORIGIN;
+
+app.use(
+  cors({
+    origin: allowedOrigin,
+    credentials: true,
+  }),
+);
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// HTTP request logging
-app.use(morganMiddleware);
+app.use("/api/v1/products", productRoutes);
 
-// Product routes
-app.use("/products", productRoutes);
-
-// Handle unknown routes
-app.use((req, res, next) => {
-    next(new AppError(`Route ${req.originalUrl} not found`, 404));
-});
-
-// Centralized error handler
-app.use(errorHandler);
+app.use(errorMiddleware);
 
 export default app;
